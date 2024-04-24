@@ -1,0 +1,28 @@
+* {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+    
+    height: 100%;
+    width: 100%;
+
+
+    border: 0px solid red;
+}
+
+.wrapper {
+    border: 2px solid green;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+}

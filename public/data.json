@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "category": "Clothing",
+            "name": "Blue Jeans",
+            "price": 43.82,
+            "description": "Blue Jeans: Comfortable Denim",
+            "thumbnail": "./clothing/blue-jeans.jpg",
+            "location": "jkt"
+        },
+        {
+            "category": "Electronics",
+            "name": "iPhone 13",
+            "price": 9.73,
+            "description": "iPhone 13: Latest Smartphone",
+            "thumbnail": "./electronics/iphone-13.jpg",
+            "location": "nyc"
+        },
+        {
+            "category": "Toys",
+            "name": "LEGO Set",
+            "price": 23.42,
+            "description": "LEGO Set: Creative Building Blocks",
+            "thumbnail": "./toys/lego-set.jpg",
+            "location": "par"
+        },
+        {
+            "category": "Home Decor",
+            "name": "The Alchemist",
+            "price": 90.67,
+            "description": "The Alchemist: Bestselling Novel",
+            "thumbnail": "./home decor/the-alchemist.jpg",
+            "location": "nyc"
+        },
+        {
+            "category": "Books",
+            "name": "Darling In The FranXX",
+            "price": 38.05,
+            "description": "Darling In The FranXX: Illustrated Guide",
+            "thumbnail": "./books/darling-in-the-franxx.jpg",
+            "location": "tok"
+        }
+    ]
+}
