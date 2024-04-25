@@ -14,7 +14,7 @@
             "price": 9.73,
             "description": "iPhone 13: Latest Smartphone",
             "thumbnail": "./electronics/iphone-13.jpeg",
-            "location": "New York City"
+            "location": "Bogor"
         },
         {
             "category": "Toys",
@@ -22,7 +22,7 @@
             "price": 23.42,
             "description": "LEGO Set: Creative Building Blocks",
             "thumbnail": "./toys/lego-set.jpeg",
-            "location": "Paris"
+            "location": "Semarang"
         },
         {
             "category": "Books",
@@ -30,7 +30,7 @@
             "price": 90.67,
             "description": "The Alchemist: Bestselling Novel",
             "thumbnail": "./books/the-alchemist.jpeg",
-            "location": "New York City"
+            "location": "Balikpapan"
         },
         {
             "category": "Books",
@@ -38,7 +38,7 @@
             "price": 38.05,
             "description": "Darling In The FranXX: Illustrated Guide",
             "thumbnail": "./books/darling-in-the-franxx.jpeg",
-            "location": "Tokyo"
+            "location": "Bogor"
         }
     ]
 }
