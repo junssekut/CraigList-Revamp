@@ -1,5 +1,5 @@
 * {
-    width: 100%;
+    font-family: var(--font-plus-jakarta-sans);
 }
 
 .container {
@@ -12,17 +12,176 @@
     height: 100%;
     width: 100%;
 
+    /* border: 0px solid red; */
+}
 
-    border: 0px solid red;
+.location-title {
+    padding: 0 0 var(--padding-2xl) 0;
+    font-size: var(--font-regular-size);
+    color: var(--color-dimgray-100);
+    letter-spacing: 0.15rem;
 }
 
 .wrapper {
-    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+
+    /* border: 2px solid green; */
+    width: 100%;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+
+    width: 10%;
+
+    padding: 30px 30px 30px 0;
+    gap: 30px;
+
+    /* border: 2px solid pink; */
+}
+
+.filter {
+
+}
+
+.filter-title {
+    font-size: var(--font-size-xs);
+    color: var(--color-dimgray-200);
+
+    margin-bottom: 0;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
-    width: 500px;
+    gap: 3px;
+    /* border: 2px solid black; */
+}
+
+/*  */
+/* Hide the default checkbox */
+.filter-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Style for the custom checkbox */
+.filter-checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px; /* Adjust this value to change the size of the checkbox */
+    cursor: pointer;
+    user-select: none;
+
+    font-size: var(--font-size-4xs);
+}
+
+/* Create the checkbox element */
+.filter-checkbox label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; /* Adjust this value to change the size of the checkbox */
+    height: 12px; /* Adjust this value to change the size of the checkbox */
+    border: 1px solid var(--color-dimgray-100);
+    background-color: var(--color-white);
+    border-radius: 50%; /* Make the checkbox round */
+    transition: background-color 0.5s, border-color 0.5s; /* Smooth transition for background and border color */
+}
+
+/* Style for the checked state of the custom checkbox */
+.filter-checkbox input[type="checkbox"]:checked + label::before {
+    background-color: var(--color-khaki); /* Change this color for the checked state */
+    border-color: var(--color-dimgray-100); /* C
+    margin-bottom: 0;hange this color for the checked state */
+}
+
+/* Style for the checkmark */
+.filter-checkbox label::after {
+    content: ''; /* Unicode character for checkmark */
+    font-size: 14px; /* Adjust this value to change the size of the checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the checkmark */
+    color: #fff; /* Change this color for the checkmark */
+    display: none;
+}
+
+/* Style for the checked state of the checkmark */
+.filter-checkbox input[type="checkbox"]:checked + label::after {
+    display: block;
+}
+/*  */
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    row-gap: 15px;
+    column-gap: 10px;
+}
+
+.product {
+    padding: var(--padding-5xs) 0 var(--padding-13xl) 0;
+    /* padding: var(--padding-2xl); */
+    /* padding-bottom: 50px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 300px;
+    height: 300px;
+
+    transform-style: preserve-3d;
+    
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /* border-radius: 30px; */
+
+    cursor: pointer;
+}
+
+.product-image {
+    width: 75%;
+    height: 75%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    object-fit: cover;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 75%;
+    height: 100%;
+}
+
+.product-name {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+}
+
+.product-price {
+    color: var(--color-khaki);
+    font-weight: 700;
+    font-size: var(--font-size-7xl);
+    margin: 0;
+}
+
+.product-description {
+    margin: 5px 0 0 0;
+    color: var(--color-gray);
+    font-size: var(--font-size-xs);
 }

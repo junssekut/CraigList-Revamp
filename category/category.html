@@ -7,31 +7,53 @@
 
     <link rel="stylesheet" href="./category.css">
     <link rel="stylesheet" href="../Home/global.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
     <div class="container">
-        <p>/Location/Category/<span id="location-href"></span></p>
+        <nav id="header"></nav>
+
+        <p class="location-title">/Location/Category/<span id="location-href"></span></p>
 
         <div class="wrapper">
-            <div class="filter">
-                <h1>Sort by</h1>
-                <div class="menu">
-                    <input type="checkbox" id="filter-recently-posted">Recently Posted
-                    <input type="checkbox" id="filter-popular">Popular
-                    <input type="checkbox" id="filter-low-to-high">Price: Low-High
-                    <input type="checkbox" id="filter-high-to-low">Price: High-Low
+            <div class="filters">
+                <div class="filter">
+                    <h1 class="filter-title">Filter: Sort by Price</h1>
+                    <div class="menu" id="filter-price">
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filter-low-to-high" onclick="checkbox_handler(this)">
+                            <label for="filter-low-to-high">Lowest to Highest</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filter-high-to-low" onclick="checkbox_handler(this)">
+                            <label for="filter-high-to-low">Highest to Lowest</label>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="filter">
+                    <h1 class="filter-title">Filter: Location</h1>
+                    <div class="menu" id="filter-location"></div>
+                </div>
             </div>
-            <div class="products">
+            
+            <div class="products" id="products-list">
                 <span id="location-href"></span>
-                
             </div>
         </div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <footer id="footer"></footer>
+    </div>
+    
+    <script src="./tilt.jquery.js"></script>
+
     <script src="./category.js"></script>
 </body>
 </html>
