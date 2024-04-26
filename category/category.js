@@ -1,4 +1,11 @@
+let category;
 let data, data_display;
+
+function onProductClick(product) {
+    product = product.currentTarget;
+    
+    window.open(`/product/product.html?id=${product.getAttribute('product-id')}`, '_self');
+}
 
 function load_location_filter() {
     const locations = [];
@@ -159,7 +166,7 @@ function load_data() {
             data = JSON.parse(this.responseText);
             data_display = data;
 
-            data.products = data.products.filter((product) => product.category === localStorage.getItem('selected-category'));    
+            data.products = data.products.filter((product) => product.category === category);    
 
             resolve(true);
         };
@@ -183,6 +190,8 @@ function render() {
     data_display.products.forEach(product => {
         let element = document.createElement('div');
         element.setAttribute('product-location', product.location);
+        element.setAttribute('product-id', product.id);
+        element.addEventListener('click', onProductClick);
         // data-tilt data-tilt-maxTilt="15" data-tilt-speed="5000" data-tilt-perspective="1000"
         element.innerHTML = `
             <div class="product" data-aos="flip-down">
@@ -210,13 +219,18 @@ function init() {
     });
 
     $(document).ready(function() {
-        if (!localStorage.getItem('selected-category')) {
-            alert('You have not selected any category yet, redirecting to home...');
-            window.location.href = '/home/home.html';
-            return;
-        }
+        var params = new URLSearchParams(window.location.search);
+        const query_category = params.get('category');
 
-        document.getElementById('location-href').textContent = localStorage.getItem('selected-category');
+        if (!query_category)
+            swal("Error", "You must select a category to enter this page.", "error")
+                .then(() => {
+                    window.open('/home/home.html', '_self');   
+                });
+
+        category = query_category;
+
+        document.getElementById('location-href').textContent = category;
     });
 
     load_data().then(() => render()).catch(err => console.error(err));
