@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="../Home/global.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+</head>
+<body>
+    <div class="container">
+        <!-- <nav id="header"></nav> -->
+
+        <p class="location-title">/Location/Category/<span id="location-href"></span></p>
+
+        <div class="wrapper">
+            <div class="modal">
+                <div class="top-modal">
+                    <div class="product-preview-images" id="list-preview-images">
+                        <img src="" alt="" class="preview-image" data-aos="fade-left">
+                        <img src="" alt="" class="preview-image" data-aos="fade-left">
+                        <img src="" alt="" class="preview-image" data-aos="fade-left">
+                        <img src="" alt="" class="preview-image" data-aos="fade-left">
+                    </div>
+                    <div class="product-image" id="product-thumbnail-image">
+                        <img src="" alt="" class="thumbnail-image" id="thumbnail-image" data-aos="zoom-in">
+                        <button class="make-favorite-button" id="make-favorite"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-detail">
+                        <h1 class="product-name" id="product-name"></h1>
+                        <p class="product-price" id="product-price"></p>
+                        <p class="product-description" id="product-description"></p>
+
+                        <button class="make-offer-button" id="make-offer">Make Offer</button>
+                    </div>
+                </div>
+                <div class="bottom-modal">
+                    <div class="product-location-wrapper">
+                        <h1 class="modal-title">Product Location</h1>
+                        <div id="product-location-map"></div>
+                    </div>
+
+                    <div class="product-description-wrapper">
+                        <h1 class="modal-title">Product Description</h1>
+                        <div class="product-description-content">
+                            <p class="product-description-big" id="product-description-big"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- <footer id="footer"></footer> -->
+    </div>
+
+    <script src="../public/tilt.jquery.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="../public/ajax-handler.js"></script>
+    <script src="./product.js"></script>
+</body>
+</html>

@@ -1,43 +1,55 @@
 {
     "products": [
         {
+            "id": "1",
             "category": "Clothing",
             "name": "Blue Jeans",
             "price": 43.82,
-            "description": "Blue Jeans: Comfortable Denim",
-            "thumbnail": "./clothing/blue-jeans.jpeg",
-            "location": "Jakarta"
+            "briefDescription": "Blue Jeans: Comfortable Denim",
+            "description": "Blue jeans are a quintessential piece of clothing that has transcended time and fashion trends, becoming a staple in wardrobes around the world. With its timeless appeal and versatile nature, blue jeans have cemented their place as a symbol of casual elegance and rugged durability.\n\nCrafted from denim, a sturdy and durable fabric known for its resilience, blue jeans offer unparalleled comfort and style. The indigo hue of the denim fabric lends blue jeans their iconic color, evoking a sense of cool confidence and effortless sophistication.",
+            "thumbnail": "/public/clothing/blue-jeans.jpeg",
+            "images": [
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/books/the-alchemist.jpeg",
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/clothing/blue-jeans.jpeg"
+            ],
+            "location": "Jakarta Pasar Senen"
         },
         {
+            "id": "2",
             "category": "Electronics",
             "name": "iPhone 13",
             "price": 9.73,
             "description": "iPhone 13: Latest Smartphone",
-            "thumbnail": "./electronics/iphone-13.jpeg",
+            "thumbnail": "/public/electronics/iphone-13.jpeg",
             "location": "Bogor"
         },
         {
+            "id": "3",
             "category": "Toys",
             "name": "LEGO Set",
             "price": 23.42,
             "description": "LEGO Set: Creative Building Blocks",
-            "thumbnail": "./toys/lego-set.jpeg",
+            "thumbnail": "/public/toys/lego-set.jpeg",
             "location": "Semarang"
         },
         {
+            "id": "4",
             "category": "Books",
             "name": "The Alchemist",
             "price": 90.67,
             "description": "The Alchemist: Bestselling Novel",
-            "thumbnail": "./books/the-alchemist.jpeg",
+            "thumbnail": "/public/books/the-alchemist.jpeg",
             "location": "Balikpapan"
         },
         {
+            "id": "5",
             "category": "Books",
             "name": "Darling In The FranXX",
             "price": 38.05,
             "description": "Darling In The FranXX: Illustrated Guide",
-            "thumbnail": "./books/darling-in-the-franxx.jpeg",
+            "thumbnail": "/public/books/darling-in-the-franxx.jpeg",
             "location": "Bogor"
         }
     ]

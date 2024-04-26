@@ -106,7 +106,12 @@ function checkbox_filter_location_handler(checkbox) {
         const location = product.parentNode.getAttribute('product-location');
         const visible = checked_locations.includes(location);
 
-        product.style.display = visible ? 'flex' : 'none';
+        product.classList.remove('aos-animate');
+        setTimeout(function() {
+            product.style.display = visible ? 'flex' : 'none';
+
+            product.classList.add('aos-animate');
+        }, 100);
     });
 }
 
@@ -154,6 +159,8 @@ function load_data() {
             data = JSON.parse(this.responseText);
             data_display = data;
 
+            data.products = data.products.filter((product) => product.category === localStorage.getItem('selected-category'));    
+
             resolve(true);
         };
 
@@ -179,11 +186,11 @@ function render() {
         // data-tilt data-tilt-maxTilt="15" data-tilt-speed="5000" data-tilt-perspective="1000"
         element.innerHTML = `
             <div class="product" data-aos="flip-down">
-                <img class="product-image" src="../public/${product.thumbnail}" alt="${product.image}" >
+                <img class="product-image" src="${product.thumbnail}" alt="${product.image}" >
                 <div class="product-detail">
                     <h1 class="product-name">${product.name}</h1>
                     <p class="product-price">$${product.price}</p>
-                    <p class="product-description">${product.description}</p>
+                    <p class="product-description">${product.briefDescription || product.description}</p>
                 </div>
             </div>
         `;
@@ -203,7 +210,11 @@ function init() {
     });
 
     $(document).ready(function() {
-        localStorage.setItem('selected-category', 'Books');
+        if (!localStorage.getItem('selected-category')) {
+            alert('You have not selected any category yet, redirecting to home...');
+            window.location.href = '/home/home.html';
+            return;
+        }
 
         document.getElementById('location-href').textContent = localStorage.getItem('selected-category');
     });

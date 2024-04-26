@@ -1,0 +1,455 @@
+a {
+  text-decoration: none;
+}
+.email-or-phone {
+  width: 208px;
+  height: 41px;
+  position: relative;
+  color: var(--color-darkgray);
+  display: none;
+  align-items: center;
+  flex-shrink: 0;
+}
+.email-phone-input {
+  width: 308px;
+  height: 57px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  display: none;
+}
+.craiglist {
+  margin: 0;
+  width: 259px;
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  cursor: pointer;
+}
+.password-field-child {
+  width: 382px;
+  height: 515px;
+  position: relative;
+  box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.3);
+  border-radius: var(--br-6xl);
+  background-color: var(--color-gray-100);
+  display: none;
+  max-width: 100%;
+}
+.login {
+  margin: 0;
+  width: 209px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 4;
+}
+.stay-updated-on {
+  padding-top: 10px;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  z-index: 3;
+}
+.email-field,
+.login-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.login-parent {
+  flex: 1;
+  flex-direction: column;
+}
+.email-field {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 21px var(--padding-12xs);
+  font-size: var(--font-size-13xl);
+}
+.login-label-child {
+  height: 57px;
+  width: 308px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  display: none;
+}
+.email-or-phone1 {
+  width: 208px;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: var(--font-size-mini);
+  background-color: transparent;
+  height: 41px;
+  position: relative;
+  color: var(--color-black);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  z-index: 4;
+}
+.email-field1,
+.login-label {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.login-label {
+  margin: 0;
+  flex: 1;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: var(--padding-7xs) var(--padding-lgi);
+  z-index: 3;
+}
+.email-field1 {
+  align-self: stretch;
+  padding: 0 0 13px var(--padding-12xs);
+}
+.frame-child {
+  border: 1px solid var(--color-black);
+  outline: 0;
+  background-color: var(--color-white);
+  height: 57px;
+  width: 308px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  box-sizing: border-box;
+  display: none;
+}
+.password-placeholder,
+.show-password-btn {
+  position: relative;
+  font-family: var(--font-plus-jakarta-sans);
+  text-align: left;
+  z-index: 4;
+}
+.password-placeholder {
+  width: 208px;
+  font-size: var(--font-size-mini);
+  color: var(--color-darkgray);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.show-password-btn {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-goldenrod);
+  display: inline-block;
+  min-width: 43px;
+}
+.apple-sign-in-label,
+.password-field-inner,
+.rectangle-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.apple-sign-in-label {
+  flex-direction: column;
+  padding: 9px 0 0;
+}
+.password-field-inner,
+.rectangle-parent {
+  flex-direction: row;
+}
+.rectangle-parent {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: var(--padding-7xs) var(--padding-lgi) var(--padding-mid);
+  background-color: var(--color-white);
+  flex: 1;
+  border-radius: var(--br-8xs);
+  gap: 11px;
+  z-index: 3;
+}
+.password-field-inner {
+  align-self: stretch;
+  padding: 0 0 0 var(--padding-12xs);
+}
+.forgot-password-btn {
+  text-decoration: none;
+  color: var(--color-goldenrod);
+  flex: 1;
+  position: relative;
+  z-index: 3;
+}
+.email-field2 {
+  width: 211px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-12xs) 25px;
+  box-sizing: border-box;
+  font-size: var(--font-size-base);
+  color: var(--color-goldenrod);
+}
+.sign-in {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-21xl);
+  background-color: var(--color-khaki);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.sign-in:hover{
+  background-color: var(--color-khaki2);
+}
+
+.sign-in1 {
+  color: var(--color-black);
+  position: absolute;
+  margin-top: 16px;
+  left: 48px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 19px;
+  z-index: 4;
+  cursor: pointer;
+}
+.sign-in-parent {
+  height: 57px;
+  flex: 1;
+  position: relative;
+  white-space: nowrap;
+}
+.registration-button {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-12xs);
+  text-align: center;
+}
+.divider,
+.or {
+  position: relative;
+  z-index: 3;
+}
+.divider {
+  height: 1px;
+  flex: 1;
+  border-top: 1px solid var(--color-gainsboro-100);
+  box-sizing: border-box;
+  min-width: 92px;
+}
+.or {
+  align-self: stretch;
+  font-weight: 500;
+}
+.or-wrapper {
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 4px;
+  box-sizing: border-box;
+}
+.divider1 {
+  height: 1px;
+  flex: 1;
+  position: relative;
+  border-top: 1px solid var(--color-gainsboro-100);
+  box-sizing: border-box;
+  min-width: 92px;
+  z-index: 3;
+}
+.divider-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0 18px;
+  gap: 3px;
+  text-align: center;
+}
+.sign-in-with-apple {
+  height: 56px;
+  width: 308px;
+  position: relative;
+  border-radius: var(--br-21xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  display: none;
+}
+.apple-icon {
+  width: 13px;
+  height: 15px;
+  position: relative;
+  z-index: 4;
+}
+.apple-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-12xs) 0 0;
+}
+.sign-in-with {
+  position: relative;
+  font-size: var(--font-size-mini);
+  font-weight: 600;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-black);
+  text-align: center;
+  display: inline-block;
+  min-width: 128px;
+  z-index: 4;
+}
+.password-field,
+.sign-in-with-apple-parent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sign-in-with-apple-parent {
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  padding: var(--padding-mid) 71px 16px;
+  background-color: var(--color-white);
+  border-radius: var(--br-21xl);
+  flex-direction: row;
+  gap: 13px;
+  z-index: 3;
+}
+.password-field {
+  box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.3);
+  border-radius: var(--br-6xl);
+  background-color: var(--color-gray-100);
+  flex-direction: column;
+  padding: 48px var(--padding-17xl) 27px 37px;
+  box-sizing: border-box;
+  gap: 4px;
+  max-width: 100%;
+  z-index: 2;
+}
+.join-now {
+  color: var(--color-goldenrod);
+}
+.new-to-craiglist-container {
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+}
+.new-to-craiglist-join-now-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-17xl) 0 var(--padding-19xl);
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: var(--color-black);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.inner-component {
+  width: 382px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 12px;
+  max-width: 100%;
+}
+.inner-component-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+  font-size: var(--font-size-mini);
+}
+.login-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 55px 62px 80px;
+  box-sizing: border-box;
+  gap: 47px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-plus-jakarta-sans);
+}
+@media screen and (max-width: 750px) {
+  .craiglist {
+    font-size: 29px;
+  }
+  .login {
+    font-size: var(--font-size-7xl);
+  }
+  .login-page {
+    gap: 43px;
+    padding-left: var(--padding-12xl);
+    padding-right: var(--padding-12xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 675px) {
+  .password-field {
+    padding-top: var(--padding-12xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .email-or-phone {
+    font-size: var(--font-size-base);
+  }
+  .craiglist {
+    font-size: var(--font-size-3xl);
+  }
+  .login {
+    font-size: var(--font-size-lgi);
+  }
+  .rectangle-parent {
+    flex-wrap: wrap;
+  }
+  .sign-in-with-apple-parent {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .login-page {
+    gap: 22px;
+  }
+}
