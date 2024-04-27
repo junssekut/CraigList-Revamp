@@ -12,18 +12,26 @@ document.addEventListener('click', function(event) {
 });
 
 // Function to load HTML content
-function loadHTML(url, targetId) {
+function loadHTML(url, targetId, load = true) {
+    if (!load) return Promise.resolve();
+
     return fetch(url)
         .then(response => response.text())
         .then(html => {
             // Inject the HTML content into the target element
-            document.getElementById(targetId).innerHTML = html;
+            const element = document.getElementById(targetId);
+            
+            if (!element) return Promise.reject(new Error(`Failed to load HTML to element with the id #${targetId} (does not exists).`));
+
+            element.innerHTML = html;
         })
         .catch(error => console.error('Error fetching HTML:', error));
 }
 
 // Function to load CSS
-function loadCSS(url) {
+function loadCSS(url, load = true) {
+    if (!load) return Promise.resolve();
+
     return new Promise((resolve, reject) => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
@@ -35,13 +43,16 @@ function loadCSS(url) {
 }
 
 // Function to load Google Fonts CSS dynamically
-function loadFont(fontFamily, fontWeight) {
+function loadFont(fontFamily, fontWeight, load = true) {
+    if (!load) return Promise.resolve();
     const fontUrl = `https://fonts.googleapis.com/css2?family=${fontFamily.replace(/ /g, '+')}:ital,wght@${fontWeight}&display=swap`;
     return loadCSS(fontUrl);
 }
 
 // Function to load a script dynamically
-function loadScript(url, defer = false) {
+function loadScript(url, defer = false, load = true) {
+    if (!load) return Promise.resolve();
+
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = url;
@@ -52,18 +63,77 @@ function loadScript(url, defer = false) {
     });
 }
 
-Promise.all([
-    loadCSS('/global/global.css'),
-    loadHTML('/global/navbar/navbar.html', 'navbar-placeholder'),
-    loadHTML('/global/footer/footer.html', 'footer-placeholder'),
-    loadCSS('/global/navbar/navbar.css'),
-    loadCSS('/global/footer/footer.css'),
-    loadCSS('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap'),
-    loadCSS('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'),
-    loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'),
-    loadCSS('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css'),
-    loadScript('https://unpkg.com/sweetalert/dist/sweetalert.min.js'),
-    loadScript('https://unpkg.com/scrollreveal'),
-    loadCSS('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/styles/overlayscrollbars.css'),
-    loadScript('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/browser/overlayscrollbars.browser.es6.min.js').then(() => loadScript('/global/js/overlay-scrollbars.js', true)),
-]).catch(error => console.error('Error loading resources:', error));
+function parseBooleanQueryParam(value) {
+    if (typeof value !== 'string') {
+        return false; // Return false if the input is not a string
+    }
+    
+    const lowerCaseValue = value.toLowerCase().trim(); // Convert to lowercase and remove leading/trailing spaces
+    
+    // Check for truthy representations
+    if (lowerCaseValue === 'true' || lowerCaseValue === '1' || lowerCaseValue === 'yes' || lowerCaseValue === 'on') {
+        return true;
+    }
+    
+    // Check for falsy representations
+    if (lowerCaseValue === 'false' || lowerCaseValue === '0' || lowerCaseValue === 'no' || lowerCaseValue === 'off') {
+        return false;
+    }
+    
+    // If the value does not match any recognized representation, return false
+    return false;
+}
+
+function init() {
+    const scriptTag = document.querySelector('script[data-craiglist]');
+    let load_global = true, load_navfoot = true, load_fonts = true, load_sweet_alert = true, load_scroll_reveal = true, load_overlay_scrollbars = true;
+    
+    if (scriptTag) {
+        if (scriptTag.hasAttribute('data-load-navfoot')) {
+            load_navfoot = parseBooleanQueryParam(scriptTag.getAttribute('data-load-navfoot'));
+            load_global = load_navfoot;
+            load_fonts = load_navfoot;
+
+            if (!load_navfoot && !scriptTag.hasAttribute('data-load-global')) load_global = true;
+            if (!load_navfoot && !scriptTag.hasAttribute('data-load-fonts')) load_fonts = true;
+        }
+        if (scriptTag.hasAttribute('data-load-global')) {
+            load_global = parseBooleanQueryParam(scriptTag.getAttribute('data-load-global'));
+
+            if (load_navfoot && !load_global) load_global = true;
+        }
+        if (scriptTag.hasAttribute('data-load-fonts')) {
+            load_fonts = parseBooleanQueryParam(scriptTag.getAttribute('data-load-fonts'));
+
+            if (load_navfoot && !load_fonts) load_fonts = true;
+        }
+        if (scriptTag.hasAttribute('data-load-sweet-alert')) load_sweet_alert = parseBooleanQueryParam(scriptTag.getAttribute('data-load-sweet-alert'));
+        if (scriptTag.hasAttribute('data-load-scroll-reveal')) load_scroll_reveal = parseBooleanQueryParam(scriptTag.getAttribute('data-load-scroll-reveal'));
+        if (scriptTag.hasAttribute('data-load-overlay-scrollbars')) load_overlay_scrollbars = parseBooleanQueryParam(scriptTag.getAttribute('data-load-overlay-scrollbars'));
+    }
+
+    Promise.all([
+        loadCSS('/global/global.css', load_global),
+
+        loadHTML('/global/navbar/navbar.html', 'navbar-placeholder', load_navfoot),
+        loadHTML('/global/footer/footer.html', 'footer-placeholder', load_navfoot),
+        loadCSS('/global/navbar/navbar.css', load_navfoot),
+        loadCSS('/global/footer/footer.css', load_navfoot),
+
+        loadCSS('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap', load_fonts),
+        loadCSS('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap', load_fonts),
+
+        loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', load_fonts),
+        loadCSS('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css', load_fonts),
+
+        loadScript('https://unpkg.com/sweetalert/dist/sweetalert.min.js', load_sweet_alert),
+
+        loadScript('https://unpkg.com/scrollreveal', load_scroll_reveal),
+
+        loadCSS('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/styles/overlayscrollbars.css', load_overlay_scrollbars),
+        
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/browser/overlayscrollbars.browser.es6.min.js', load_overlay_scrollbars).then(() => loadScript('/global/js/overlay-scrollbars.js', true)),
+    ]).catch((error) => console.error(`Failed to load resources: ${error}`));
+}
+
+init();

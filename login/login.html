@@ -1,101 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Login</title>
 
-    <link rel="stylesheet" href="/global/global.css" />
     <link rel="stylesheet" href="./login.css" />
+</head>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@200;400;500;600;700;800&display=swap"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
-  </head>
-  <body>
+<body>
     
     <div class="login-page">
-      <div class="email-or-phone">Email or Phone</div>
-      <div class="email-phone-input"></div>
-      <h2 class="craiglist" onclick="goTo('/home/home.html')">Craiglist</h2>
-      <div class="inner-component-wrapper">
-        <div class="inner-component">
-          <div class="password-field">
-            <div class="password-field-child"></div>
-            <div class="email-field">
-              <div class="login-parent">
-                <h2 class="login">Login</h2>
-                <div class="stay-updated-on">
-                  Stay updated on your professional world
+        <div class="email-or-phone">Email or Phone</div>
+        <div class="email-phone-input"></div>
+        <h2 class="craiglist">CraigList</h2>
+        <div class="inner-component-wrapper">
+            <div class="inner-component">
+                <div class="password-field">
+                    <div class="password-field-child"></div>
+                    <div class="email-field">
+                        <div class="login-parent">
+                            <h2 class="login">Login</h2>
+                            <div class="stay-updated-on">
+                                Stay updated on your professional world
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-field1">
+                        <form class="login-label">
+                            <div class="login-label-child"></div>
+                            <input class="email-or-phone1" placeholder="Email or Phone" type="text" />
+                        </form>
+                    </div>
+                    <div class="email-field1">
+                        <form class="login-label">
+                            <div class="login-label-child"></div>
+                            <input class="email-or-phone1" placeholder="Password" type="password" />
+                        </form>
+                    </div>
+                    <div class="email-field2">
+                        <a href="link-forgot-password" class="forgot-password-btn">Forgot Password?</a>
+                    </div>
+                    <div class="registration-button">
+                        <div class="sign-in-parent">
+                            <a href="/Home/Home-After.html" class="sign-in" id="signIn">
+                                <div class="sign-in1">Sign in</div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="divider-parent">
+                        <div class="divider"></div>
+                        <div class="or-wrapper">
+                            <div class="or">or</div>
+                        </div>
+                        <div class="divider1"></div>
+                    </div>
+                    <button class="sign-in-with-apple-parent">
+                        <div class="sign-in-with-apple"></div>
+                        <div class="apple-icon-wrapper">
+                            <i class="fa-brands fa-apple"></i>
+                        </div>
+                        <div class="sign-in-with">Sign in with Apple</div>
+                    </button>
                 </div>
-              </div>
+                <section class="new-to-craiglist-join-now-wrapper">
+                    <div class="new-to-craiglist-container">
+                        <span>New to CraigList? </span>
+                        <a href="/Register/register.html"><span class="join-now">Join now</span></a>
+                    </div>
+                </section>
             </div>
-            <div class="email-field1">
-              <form class="login-label">
-                <div class="login-label-child"></div>
-                <input
-                  class="email-or-phone1"
-                  placeholder="Email or Phone"
-                  type="text"
-                />
-              </form>
-            </div>
-            <div class="email-field1">
-                <form class="login-label">
-                  <div class="login-label-child"></div>
-                  <input
-                    class="email-or-phone1"
-                    placeholder="Password"
-                    type="password"
-                  />
-                </form>
-              </div>
-            <div class="email-field2">
-              <a href="link-forgot-password" class="forgot-password-btn">Forgot Password?</a>
-            </div>
-            <div class="registration-button">
-              <div class="sign-in-parent">
-                <a href="/Home/Home-After.html" class="sign-in" id="signIn">
-                  <div class="sign-in1">Sign in</div>
-                </a>
-              
-              </div>
-            </div>
-            <div class="divider-parent">
-              <div class="divider"></div>
-              <div class="or-wrapper">
-                <div class="or">or</div>
-              </div>
-              <div class="divider1"></div>
-            </div>
-            <button class="sign-in-with-apple-parent">
-              <div class="sign-in-with-apple"></div>
-              <div class="apple-icon-wrapper">
-                <i class="fa-brands fa-apple"></i>
-              </div>
-              <div class="sign-in-with">Sign in with Apple</div>
-            </button>
-          </div>
-          <section class="new-to-craiglist-join-now-wrapper">
-            <div class="new-to-craiglist-container">
-              <span>New to CraigList? </span>
-              <a href="/Register/register.html"><span class="join-now">Join now</span></a>
-            </div>
-          </section>
         </div>
-      </div>
     </div>
 
-    <script>
-      var goTo = function (url) {
-        window.location.href = url;
-      };
+    <script src="/global/global.js" data-craiglist data-load-navfoot="false"></script>
+</body>
 
-      var signIn = document.getElementById("signIn");
-      if (signIn) {
-        signIn.addEventListener("click", function (e) {
-          // Please sync "Desktop -2" to the project
-        });
-      }
-      </script>
-  </body>
 </html>
