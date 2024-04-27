@@ -1,0 +1,119 @@
+
+.navbar {
+    background-color: var(--color-white);
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #000000;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+}
+
+.loc-input{
+    padding: 10px;
+    background-color: var(--color-gainsboro);
+    border-radius: 20px;
+}
+
+.input-loc{
+    background: none;
+    border: none;
+    outline: 0;
+    text-align: center;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center; /* Menengahkan secara horizontal */
+    align-items: center;
+    list-style: none;
+    display: flex;   
+    justify-content: space-between;
+}
+
+.img-location{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+
+.nav-menu li {
+    padding: 10px 20px 10px 20px ;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: var(--color-khaki);
+    border-radius: 20px;
+    display: inline;
+}
+
+.nav-menu li a {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-black);
+    font-family: var(--font-plus-jakarta-sans);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li:hover {
+    background-color: var(--color-khaki-100); 
+}
+
+.navbar-quick-links {
+    background-color: var(--color-khaki);
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black;     
+    height: 40px;
+    align-items: center;
+    display: flex;   
+}
+
+.navbar-quick-links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.quick-links {
+    padding-top: 0px;
+    align-items: center;
+    list-style: none;
+    display: flex;   
+    justify-content: flex-start;
+    padding-left: 125px;
+    /* margin: 0 16px; */
+}
+
+.quick-link {
+    margin: 0;
+    padding: 0px 20px 0px 0;
+    margin-left: 15px;
+}
+
+.quick-link-text {
+    text-decoration: none;
+    color: var(--color-black);
+    font-family: var(--font-poppins);
+    font-size: var(--regular-13-size);
+    transition: color 0.3s ease-in;
+}
+
+.quick-link-text:hover {
+    color: var(--color-white);
+}

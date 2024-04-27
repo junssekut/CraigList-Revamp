@@ -15,9 +15,18 @@
 
 .location-title {
     padding: 0 0 var(--padding-2xl) 0;
-    font-size: var(--font-regular-size);
+    font-size: var(--font-size-xs);
     color: var(--color-dimgray-100);
     letter-spacing: 0.15rem;
+}
+
+.location-href {
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.location-href:hover {
+    color: var(--color-khaki2);
 }
 
 .wrapper {

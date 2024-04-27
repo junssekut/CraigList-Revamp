@@ -46,7 +46,16 @@ async function load_product() {
     const product = await getProductFromID(product_id);
 
     document.title = product.name;
-    if (document.getElementById('location-href').textContent === '') document.getElementById('location-href').textContent = product.category;
+    
+    {
+        const element_category_href = document.getElementById('category-href');
+        element_category_href.textContent = product.category;
+        element_category_href.addEventListener('click', () => window.open(`/category/category.html?category=${product.category}`, '_self'));
+        
+        const element_product_href = document.getElementById('product-href');
+        element_product_href.textContent = product.name;
+        element_product_href.addEventListener('click', () => window.open(`/product/product.html?id=${product.id}`, '_self'));
+    }
 
     {
         const previewImages = document.getElementById('list-preview-images').querySelectorAll('.preview-image');

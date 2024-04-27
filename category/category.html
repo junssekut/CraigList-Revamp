@@ -6,24 +6,17 @@
     <title>Category</title>
 
     <link rel="stylesheet" href="./category.css">
-    <link rel="stylesheet" href="../Home/global.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap"/>
-
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav id="header"></nav>
+    <header id="navbar-placeholder"></header>
 
-        <p class="location-title">/Location/Category/<span id="location-href"></span></p>
+    <div class="container">
+        <p class="location-title">/Location/Category/<span class="location-href" id="category-href"></span></p>
 
         <div class="wrapper">
             <div class="filters">
@@ -49,12 +42,13 @@
             <div class="products" id="products-list">
             </div>
         </div>
-
-        <footer id="footer"></footer>
     </div>
-    
-    <script src="../public/tilt.jquery.js"></script>
 
-    <script src="./category.js"></script>
+    <footer id="footer-placeholder"></footer>
+    
+    <script src="/global/global.js"></script>
+    <script src="/global/js/tilt.jquery.js" defer></script>
+
+    <script src="./category.js" defer></script>
 </body>
 </html>

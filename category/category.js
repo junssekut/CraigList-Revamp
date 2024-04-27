@@ -1,8 +1,8 @@
 let category;
 let data, data_display;
 
-function onProductClick(product) {
-    product = product.currentTarget;
+function onProductClick(event) {
+    const product = event.currentTarget;
     
     window.open(`/product/product.html?id=${product.getAttribute('product-id')}`, '_self');
 }
@@ -158,7 +158,7 @@ function load_data() {
     return new Promise((resolve, reject) => {
         const ajax = new XMLHttpRequest();
 
-        ajax.open('GET', '../public/data.json', true);
+        ajax.open('GET', '/public/data.json', true);
         ajax.onreadystatechange = function () {
             if (this.readyState !== 4) return;
             if (this.status !== 200) reject(new Error('Failed to load data'));
@@ -230,7 +230,9 @@ function init() {
 
         category = query_category;
 
-        document.getElementById('location-href').textContent = category;
+        const element_category_href = document.getElementById('category-href');
+        element_category_href.textContent = category;
+        element_category_href.addEventListener('click', () => window.open(`/category/category.html?category=${category}`, '_self'));
     });
 
     load_data().then(() => render()).catch(err => console.error(err));
