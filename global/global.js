@@ -163,12 +163,12 @@ function init() {
     }
     
     Promise.all([
-        loadCSS('/global/global.css', load_global),
+        loadCSS('../global/global.css', load_global),
 
-        loadHTML('/global/navbar/navbar.html', 'navbar-placeholder', load_navfoot),
-        loadHTML('/global/footer/footer.html', 'footer-placeholder', load_navfoot),
-        loadCSS('/global/navbar/navbar.css', load_navfoot),
-        loadCSS('/global/footer/footer.css', load_navfoot),
+        loadHTML('../global/navbar/navbar.html', 'navbar-placeholder', load_navfoot),
+        loadHTML('../global/footer/footer.html', 'footer-placeholder', load_navfoot),
+        loadCSS('../global/navbar/navbar.css', load_navfoot),
+        loadCSS('../global/footer/footer.css', load_navfoot),
 
         loadCSS('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap', load_fonts),
         loadCSS('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap', load_fonts),
@@ -183,7 +183,7 @@ function init() {
         loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'),
         loadScript('https://unpkg.com/sweetalert/dist/sweetalert.min.js', load_sweet_alert),
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/browser/overlayscrollbars.browser.es6.min.js', load_overlay_scrollbars).then(() => loadScript('/global/js/overlay-scrollbars.js', true)),
-        loadScript('/global/authentication.js')
+        loadScript('../global/authentication.js')
     ])
     .then(() => {
 
