@@ -18,38 +18,82 @@
         },
         {
             "id": "2",
+            "category": "Clothing",
+            "name": "Welfric Eden - Jacket",
+            "price": 123.82,
+            "briefDescription": "Welfric Eden - Jacket: Stylish Outerwear",
+            "description": "The Welfric Eden Jacket is a stylish and versatile piece of outerwear that combines comfort and fashion. Crafted from high-quality materials, this jacket is designed to withstand the elements while keeping you looking effortlessly chic.\n\nWith its sleek design and modern silhouette, the Welfric Eden Jacket is perfect for any occasion. Whether you're heading out for a night on the town or running errands around town, this jacket will keep you warm and stylish all day long.",
+            "thumbnail": "/public/clothing/welfric-eden.jpeg",
+            "images": [
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/books/the-alchemist.jpeg",
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/clothing/blue-jeans.jpeg"
+            ],
+            "location": "Jakarta Pasar Senen"
+        },        
+        {
+            "id": "3",
             "category": "Electronics",
             "name": "iPhone 13",
             "price": 9.73,
-            "description": "iPhone 13: Latest Smartphone",
+            "description": "iPhone 13: Latest Smartphone. The iPhone 13 is the latest model in Apple's iconic smartphone lineup. With its sleek design, powerful performance, and advanced features, the iPhone 13 offers an unparalleled mobile experience. From stunning photography to seamless multitasking, the iPhone 13 is designed to keep up with your busy lifestyle. Whether you're capturing memories, staying connected with loved ones, or getting work done on the go, the iPhone 13 is the perfect companion.",
             "thumbnail": "/public/electronics/iphone-13.jpeg",
+            "briefDescription": "iPhone 13: Latest Smartphone",
+            "images": [
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/books/the-alchemist.jpeg",
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/clothing/blue-jeans.jpeg"
+            ],
             "location": "Bogor"
         },
         {
-            "id": "3",
+            "id": "4",
             "category": "Toys",
             "name": "LEGO Set",
             "price": 23.42,
-            "description": "LEGO Set: Creative Building Blocks",
+            "briefDescription": "LEGO Set: Creative Building Blocks",
+            "description": "The LEGO Set is a collection of creative building blocks designed to spark imagination and foster creativity in children and adults alike. With a wide variety of colorful bricks and unique shapes, the LEGO Set allows you to build anything you can imagine, from towering skyscrapers to intricate sculptures. Whether you're a seasoned builder or just starting out, the LEGO Set offers endless possibilities for play and exploration.",
             "thumbnail": "/public/toys/lego-set.jpeg",
+            "images": [
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/books/the-alchemist.jpeg",
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/clothing/blue-jeans.jpeg"
+            ],
             "location": "Semarang"
-        },
-        {
-            "id": "4",
-            "category": "Books",
-            "name": "The Alchemist",
-            "price": 90.67,
-            "description": "The Alchemist: Bestselling Novel",
-            "thumbnail": "/public/books/the-alchemist.jpeg",
-            "location": "Balikpapan"
         },
         {
             "id": "5",
             "category": "Books",
+            "name": "The Alchemist",
+            "price": 90.67,
+            "briefDescription": "The Alchemist: Bestselling Novel",
+            "description": "The Alchemist: Bestselling Novel. The Alchemist follows the journey of an Andalusian shepherd boy named Santiago. Believing a recurring dream to be prophetic, Santiago decides to travel to a Romani fortune-teller in a nearby town to discover its meaning. The old woman interprets the dream as a prophecy telling Santiago that he will find a hidden treasure at the Egyptian pyramids. Motivated by his dream, Santiago sells his flock and embarks on a journey to fulfill his destiny. Along the way, he encounters a variety of characters who teach him valuable lessons about life, love, and the pursuit of one's dreams.",
+            "thumbnail": "/public/books/the-alchemist.jpeg",
+            "images": [
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/books/the-alchemist.jpeg",
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/clothing/blue-jeans.jpeg"
+            ],
+            "location": "Balikpapan"
+        },
+        {
+            "id": "6",
+            "category": "Books",
             "name": "Darling In The FranXX",
             "price": 38.05,
-            "description": "Darling In The FranXX: Illustrated Guide",
+            "briefDescription": "Darling In The FranXX: Illustrated Guide",
+            "description": "Darling In The FranXX: Illustrated Guide. Darling In The FranXX is a Japanese science fiction romance anime television series produced by CloverWorks and Trigger. The story is set in a dystopian future where humanity is on the brink of extinction due to the emergence of monstrous creatures known as klaxosaurs. To combat this threat, children are raised in isolation and trained to pilot giant mechs called FranXX. The series follows a group of pilots who must navigate the complexities of love, identity, and duty as they fight to protect humanity's future.",
             "thumbnail": "/public/books/darling-in-the-franxx.jpeg",
+            "images": [
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/books/the-alchemist.jpeg",
+                "/public/clothing/blue-jeans.jpeg",
+                "/public/clothing/blue-jeans.jpeg"
+            ],
             "location": "Bogor"
         }
     ]

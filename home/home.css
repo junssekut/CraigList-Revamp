@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+
+    font-family: var(--font-plus-jakarta-sans);
 }
 
 .searchbar {
@@ -26,8 +28,101 @@ body {
 }
 
 .searchbar h1 {
-    font-family: var(--font-plus-jakarta-sans);
     font-size: 5em;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan teks */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    min-height: 900px;
+
+    padding: 70px 130px 70px 130px;
+
+    gap: 100px;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+
+    /* border: 2px solid green; */
+}
+
+.container-title {
+    color: var(--color-black);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.item-modal {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease-in-out;
+}
+
+.item-modal:hover {
+    color: var(--color-goldenrod);
+}
+
+.item-image {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item-title {
+    margin: 5px;
+    align-self: center;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container-button {
+    align-self: center;
+
+    padding: 10px 20px 10px 20px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    border: none;
+    outline: none;
+
+    border-radius: 20px;
+
+    background-color: var(--color-khaki);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    transition: background-color 0.3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.container-button:hover {
+    background-color: var(--color-khaki2);
+}
+
+.container-button-icon {
+    padding: 5px;
 }

@@ -13,6 +13,54 @@ function onPreviewImageClick(preview_image) {
     }, 100);
 }
 
+function onMakeOffer(product) {
+    if (!isAuthenticated()) {
+        swal({
+            text: 'You need to Login first before you can make offers!',
+            icon: 'error',
+            buttons: {
+                cancel: 'Cancel',
+                login: 'Login'
+            }
+        }).then((value) => {
+            switch (value) {
+                case 'login': {
+                    window.open('../login/login.html', '_self');
+                }
+            }
+        });
+
+        return;
+    }
+
+    swal(`Offered ${product.target.parentNode.childNodes[1].textContent}`, 'Successfully offered the product!', 'success');
+
+}
+
+function onMakeFavorite(product) {
+    if (!isAuthenticated()) {
+        swal({
+            text: 'You need to Login first before you can mark product as favorites!',
+            icon: 'error',
+            buttons: {
+                cancel: 'Cancel',
+                login: 'Login'
+            }
+        }).then((value) => {
+            switch (value) {
+                case 'login': {
+                    window.open('../login/login.html', '_self');
+                }
+            }
+        });
+
+        return;
+    }
+
+    console.log();
+    swal(`Favorited ${product.target.parentNode.parentNode.childNodes[5].childNodes[1].textContent}`, 'Successfully favorited the product!', 'success');
+}
+
 function renderMap(city) {
     if (!city) return;
 
@@ -82,6 +130,9 @@ async function load_product() {
         element_product_name.textContent = product.name;
         element_product_price.textContent = `$${product.price}`;
         element_product_description.textContent = product.briefDescription;
+        
+        document.getElementById('make-offer').addEventListener('click', onMakeOffer);
+        document.getElementById('make-favorite').addEventListener('click', onMakeFavorite);
     }
 
     {

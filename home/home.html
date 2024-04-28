@@ -14,6 +14,8 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="../global/js/ajax-handler.js"></script>
 </head>
 <body>
     <header id="navbar-placeholder"></header>
@@ -27,18 +29,27 @@
     </section>
 
     <div class="container">
-        <div class="categories-container">
-            <h1 class="category-title" id="category-title">Categories</h1>
-            <div class="categories-list" id="categories-list">
-                
+        <div class="container-wrapper">
+            <h1 class="container-title" id="category-title">Hot Categories</h1>
+            <div class="container-list" id="categories-list">
+                <!-- <div class="item-modal">
+                    <img class="item-image" src="../public/books/darling-in-the-franxx.jpeg" alt="">
+                    <p class="item-title">Books</p>
+                </div> -->
             </div>
         </div>
+        <div class="container-wrapper">
+            <h1 class="container-title" id="picks-title">CraigList Picks</h1>
+            <div class="container-list" id="picks-list" data-aos></div>
+        </div>
+
+        <button class="container-button" id="create-posting">Create Posting <i class="container-button-icon fa-solid fa-arrow-up-right-from-square"></i></button>
     </div>
 
     <footer id="footer-placeholder"></footer>
     
     <script src="./home.js"></script>
-    <!-- <script src="../global/global.js"></script> -->
+    <script src="../global/global.js"></script>
     <!-- <script src="/public/overlay-scrollbars.js"></script> -->
 </body>
 </html>

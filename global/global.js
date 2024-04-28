@@ -12,7 +12,7 @@ document.addEventListener('click', function(event) {
 });
 
 function create_posting_handler() {
-    swal('on maintenance');
+    swal("Maintenance", "This button is currently on maintenance!", "warning");
 }
 
 // Function to load HTML content
