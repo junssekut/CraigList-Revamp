@@ -1,4 +1,4 @@
-body, html {
+body {
     margin: 0;
     padding: 0;
 }
@@ -18,7 +18,7 @@ body, html {
     text-align: left;
 }
 
-.searchbar .conten-search {
+.searchbar .content-search {
     padding-left: 135px;
     position: absolute;
     top: 35%;

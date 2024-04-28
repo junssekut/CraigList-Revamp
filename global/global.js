@@ -11,6 +11,10 @@ document.addEventListener('click', function(event) {
     }
 });
 
+function create_posting_handler() {
+    swal('on maintenance');
+}
+
 // Function to load HTML content
 function loadHTML(url, targetId, load = true) {
     if (!load) return Promise.resolve();
@@ -20,8 +24,9 @@ function loadHTML(url, targetId, load = true) {
         .then(html => {
             // Inject the HTML content into the target element
             const element = document.getElementById(targetId);
-            
-            if (!element) return Promise.reject(new Error(`Failed to load HTML to element with the id #${targetId} (does not exists).`));
+
+            if (!element) return;
+            // if (!element) return Promise.reject(new Error(`Failed to load HTML to element with the id #${targetId} (does not exists).`));
 
             element.innerHTML = html;
         })
@@ -84,6 +89,51 @@ function parseBooleanQueryParam(value) {
     return false;
 }
 
+function authentication_handler(authenticated = false) {
+    const element_button = document.getElementById('button');
+
+    if (authenticated) {
+        element_button.textContent = 'Create Posting';
+        element_button.addEventListener('click', create_posting_handler);
+
+        const account = getAccount();
+        const element_profile = document.getElementById('button-profile');
+        element_profile.style.display = 'block';
+        element_profile.addEventListener('click', () => swal({
+            title: 'Profile Detail',
+            text: `You are authenticated as:\n${account.email}`,
+            icon: 'info',
+            buttons: {
+                logout: 'Logout',
+                ok: 'Ok'
+            }
+        }).then((value) => {
+            switch (value) {
+                case 'logout':
+                    logout();
+
+                    swal({
+                        title: 'Logged Out',
+                        text: 'Succesfully logged out!',
+                        icon: 'success'
+                    })
+
+                    authentication_handler(false);
+                    break;
+            }
+        }));
+    } else {
+        element_button.textContent = 'Login';
+        element_button.addEventListener('click', () => window.open('/login/login.html', '_self'));
+
+        const element_profile = document.getElementById('button-profile');
+        element_profile.style.display = 'none';
+    }
+
+
+    
+}
+
 function init() {
     const scriptTag = document.querySelector('script[data-craiglist]');
     let load_global = true, load_navfoot = true, load_fonts = true, load_sweet_alert = true, load_scroll_reveal = true, load_overlay_scrollbars = true;
@@ -111,7 +161,7 @@ function init() {
         if (scriptTag.hasAttribute('data-load-scroll-reveal')) load_scroll_reveal = parseBooleanQueryParam(scriptTag.getAttribute('data-load-scroll-reveal'));
         if (scriptTag.hasAttribute('data-load-overlay-scrollbars')) load_overlay_scrollbars = parseBooleanQueryParam(scriptTag.getAttribute('data-load-overlay-scrollbars'));
     }
-
+    
     Promise.all([
         loadCSS('/global/global.css', load_global),
 
@@ -126,14 +176,20 @@ function init() {
         loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', load_fonts),
         loadCSS('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css', load_fonts),
 
-        loadScript('https://unpkg.com/sweetalert/dist/sweetalert.min.js', load_sweet_alert),
-
         loadScript('https://unpkg.com/scrollreveal', load_scroll_reveal),
 
         loadCSS('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/styles/overlayscrollbars.css', load_overlay_scrollbars),
         
+        loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'),
+        loadScript('https://unpkg.com/sweetalert/dist/sweetalert.min.js', load_sweet_alert),
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/browser/overlayscrollbars.browser.es6.min.js', load_overlay_scrollbars).then(() => loadScript('/global/js/overlay-scrollbars.js', true)),
-    ]).catch((error) => console.error(`Failed to load resources: ${error}`));
+        loadScript('/global/authentication.js')
+    ])
+    .then(() => {
+
+        authentication_handler(isAuthenticated());
+    })
+    .catch((error) => console.error(`Failed to load resources: ${error}`));
 }
 
 init();

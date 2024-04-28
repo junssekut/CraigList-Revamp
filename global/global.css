@@ -67,6 +67,8 @@ body {
   --color-gray-200: rgba(0, 0, 0, 0.86);
   --color-whitesmoke: #f2f2f2;
 
+  --color-pastel-red: #FF5733;
+
   /* Gaps */
   --gap-135xl: 154px;
   --gap-58xl: 77px;
@@ -214,4 +216,8 @@ body {
 
 .swal-modal {
   font-family: var(--font-plus-jakarta-sans);
+}
+
+.swal-text {
+  text-align: center;
 }

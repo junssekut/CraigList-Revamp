@@ -7,75 +7,45 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="./login.css" />
+    
+    <script src="/global/authentication.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
-    
-    <div class="login-page">
-        <div class="email-or-phone">Email or Phone</div>
-        <div class="email-phone-input"></div>
-        <h2 class="craiglist">CraigList</h2>
-        <div class="inner-component-wrapper">
-            <div class="inner-component">
-                <div class="password-field">
-                    <div class="password-field-child"></div>
-                    <div class="email-field">
-                        <div class="login-parent">
-                            <h2 class="login">Login</h2>
-                            <div class="stay-updated-on">
-                                Stay updated on your professional world
-                            </div>
-                        </div>
-                    </div>
-                    <div class="email-field1">
-                        <form class="login-label">
-                            <div class="login-label-child"></div>
-                            <input class="email-or-phone1" placeholder="Email or Phone" type="text" />
-                        </form>
-                    </div>
-                    <div class="email-field1">
-                        <form class="login-label">
-                            <div class="login-label-child"></div>
-                            <input class="email-or-phone1" placeholder="Password" type="password" />
-                        </form>
-                    </div>
-                    <div class="email-field2">
-                        <a href="link-forgot-password" class="forgot-password-btn">Forgot Password?</a>
-                    </div>
-                    <div class="registration-button">
-                        <div class="sign-in-parent">
-                            <a href="/Home/Home-After.html" class="sign-in" id="signIn">
-                                <div class="sign-in1">Sign in</div>
-                            </a>
+    <div class="container">
+        <a href="/home/home.html" class="container-title">CraigList</a>
 
-                        </div>
-                    </div>
-                    <div class="divider-parent">
-                        <div class="divider"></div>
-                        <div class="or-wrapper">
-                            <div class="or">or</div>
-                        </div>
-                        <div class="divider1"></div>
-                    </div>
-                    <button class="sign-in-with-apple-parent">
-                        <div class="sign-in-with-apple"></div>
-                        <div class="apple-icon-wrapper">
-                            <i class="fa-brands fa-apple"></i>
-                        </div>
-                        <div class="sign-in-with">Sign in with Apple</div>
-                    </button>
+        <div class="login-modal">
+            <div class="modal-header">
+                <h1 class="modal-title">Login</h1>
+                <p class="modal-description">Stay updated on your professional world.</p>
+            </div>
+            
+            <div class="modal-inputs">
+                <input type="text" id="input-email" class="modal-input" placeholder="Email Address">
+                
+                <div class="modal-input-wrapper">
+                    <input type="password" id="input-password" class="modal-input" placeholder="Password">
+                    <i class="modal-show-icon fa-solid fa-eye-slash" id="modal-show-icon"></i>
                 </div>
-                <section class="new-to-craiglist-join-now-wrapper">
-                    <div class="new-to-craiglist-container">
-                        <span>New to CraigList? </span>
-                        <a href="/Register/register.html"><span class="join-now">Join now</span></a>
-                    </div>
-                </section>
+                
+                <span class="modal-forgot-password" id="forgot-password">Forgot Password?</span>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="modal-button" id="modal-login">Sign In</button>
+                <p class="modal-text">or</p>
+                <button class="modal-button" id="modal-login-apple"><i class="modal-login-apple-icon fa-brands fa-apple"></i>Log In with Apple ID</button>
             </div>
         </div>
     </div>
 
-    <script src="/global/global.js" data-craiglist data-load-navfoot="false"></script>
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/global/global.js" data-craiglist></script>
+
+    <script src="./login.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+
+    <link rel="stylesheet" href="./product-to-json.css">
+</head>
+
+<body>
+    <form id="productForm1">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" value="Clothing">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="Blue Jeans">
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" value="43.82">
+
+        <label for="briefDescription">Brief Description:</label>
+        <textarea id="briefDescription" name="briefDescription">Blue Jeans: Comfortable Denim</textarea>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description">Blue jeans are a quintessential piece of clothing...</textarea>
+
+        <label for="thumbnail">Thumbnail:</label>
+        <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+
+        <label for="images">Images:</label>
+        <input type="file" id="image1" name="images" accept="image/*">
+        <input type="file" id="image2" name="images" accept="image/*">
+        <input type="file" id="image3" name="images" accept="image/*">
+        <input type="file" id="image4" name="images" accept="image/*">
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="Jakarta Pasar Senen">
+
+        <input type="submit" value="Add">
+    </form>
+
+    <button id="getJsonButton">Get JSON Result</button>
+
+    <script src="./product-to-json.js"></script>
+</body>
+
+</html>
