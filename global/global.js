@@ -186,7 +186,6 @@ function init() {
         loadScript('../global/authentication.js')
     ])
     .then(() => {
-
         authentication_handler(isAuthenticated());
     })
     .catch((error) => console.error(`Failed to load resources: ${error}`));
