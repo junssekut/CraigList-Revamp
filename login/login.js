@@ -1,6 +1,4 @@
 function show_password_handler(element) {
-    console.log(element);
-
     element = element.target;
 
     const element_input_password = document.getElementById('input-password');
@@ -82,7 +80,7 @@ function login_handler() {
         title: 'Login Success',
         text: `Logged in succesfully as:\n${element_input_email.value.trim()}`,
         icon: 'success'
-    }).then(() => window.open('/home/home.html', '_blank'));
+    }).then(() => window.open('../home/home.html', '_blank'));
 
 }
 
@@ -119,7 +117,7 @@ function init() {
             text: 'You are already authenticated!\nRedirecting to home page...',
             icon: 'error'
         }).then(() => {
-            window.open('/home/home.html', '_self');
+            window.open('../home/home.html', '_self');
         });
     }
 }
