@@ -181,8 +181,6 @@ function init() {
         if (scriptTag.hasAttribute('data-load-scroll-reveal')) load_scroll_reveal = parseBooleanQueryParam(scriptTag.getAttribute('data-load-scroll-reveal'));
         if (scriptTag.hasAttribute('data-load-overlay-scrollbars')) load_overlay_scrollbars = parseBooleanQueryParam(scriptTag.getAttribute('data-load-overlay-scrollbars'));
     }
-
-    document.getElementById('map-location').addEventListener(() => swal("Maintenance", "This button is currently on maintenance!", "warning"));
     
     Promise.all([
         loadCSS('../global/global.css', load_global),
@@ -208,8 +206,12 @@ function init() {
     ])
     .then(() => {
         authentication_handler(isAuthenticated());
+        document.getElementById('navbar-map').addEventListener('click', () => swal("Error", "The service search by location is currently not available!", "error"));
     })
     .catch((error) => console.error(`Failed to load resources: ${error}`));
+
+    $(document).ready(() => {
+    });
 }
 
 init();
