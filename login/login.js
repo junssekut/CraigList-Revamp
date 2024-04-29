@@ -108,8 +108,8 @@ function init() {
         });
     })
 
+    document.getElementById('modal-signup').addEventListener('click', () => window.open('../register/signup.html', '_blank'))
     document.getElementById('modal-login').addEventListener('click', login_handler);
-    document.getElementById('modal-login-apple').addEventListener('click', () => swal({ icon: 'error', title: 'Error', text: 'This service is currently unavailable.'} ));
 
     if (isAuthenticated()) {
         swal({

@@ -183,7 +183,7 @@ body {
     background-color: var(--color-khaki2);
 }
 
-.modal-button#modal-login-apple {
+.modal-button#modal-login-signup {
     height: 45px;
 
     font-size: var(--font-size-xs);
@@ -192,8 +192,8 @@ body {
     border: 1px solid var(--color-dimgray-100);
 }
 
-.modal-login-apple-icon {
-    padding: 0 8px 3px 0;
+.modal-signup-icon {
+    padding: 0px 0 0px 5px;
     font-size: var(--font-size-mini);
 }
 

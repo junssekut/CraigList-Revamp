@@ -1,0 +1,169 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: var( --font-plus-jakarta-sans);
+}
+
+.bodyAll{
+    border-radius: 15px;
+    background-color: var(--color-white);
+    width: 600px ;
+    height: 400px;
+    padding: 0 20px 0 0px; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* gap: 10px; */
+    box-shadow: 0 10px 100px rgba(0, 0,0,0.5);
+}
+
+.image-wrapper{
+    width: 300px;
+    height: 400px;
+    background: url('./assets/bg_kuning.jpg');
+    border-radius: 15px 0 0px 15px;
+}
+
+.input-wrapper{
+    width: 260px;
+    padding-right: 5px;
+}
+
+.title-content h1{
+    font-family: var(--font-plus-jakarta-sans);
+    margin-bottom: 0;
+    font-weight: 900;
+}
+
+.title-content h2{
+    font-family: var(--font-poppins);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 20px;
+    /* font-weight: 900; */
+}
+
+.name-wrapper{
+    background-color: var(--color-gainsboro);
+    border-radius: 5px;
+    padding: 8px 8px;
+}
+
+.name-input{
+    margin-bottom: 0em;
+}
+
+.text-wrapper{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.name-input h5{
+    margin: 0.5em 0;
+}
+
+.input-name{
+    width: 100px;
+    border: 0;
+    background: 0;
+    outline: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 12px;
+    font-family: var(--font-plus-jakarta-san);
+}
+
+.input-name::placeholder{
+    font-size: 10px;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+
+.email-input{
+    width: 250px;
+    margin: 0.8em 0;
+}
+
+.email-wrapper{
+    background-color: var(--color-gainsboro);
+    border-radius: 5px;
+    padding: 8px 8px;
+}
+
+.input-email{
+    width: 230px;
+    border: 0;
+    background: 0;
+    outline: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 12px;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.input-email::placeholder{
+    font-size: 10px;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.email-input h5{
+    margin: 0.8em 0;
+}
+
+.password-wrapper{
+    background-color: var(--color-gainsboro);
+    border-radius: 5px;
+    padding: 8px 8px;
+}
+
+.password-input{
+    margin: 0.8em 0;
+    width: 250px;
+    padding-bottom: 10px;
+}
+
+.password-input h5{
+    margin: 0.5em 0;
+    width: 350px;
+
+}
+
+.input-password{
+    width: 230px;
+    border: 0;
+    background: 0;
+    outline: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 12px;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.input-password::placeholder{
+    font-size: 10px;
+    font-family: var(--font-plus-jakarta-sans);
+}
+
+.sign-up{
+    border: 0;
+    padding: 10px 25px;
+    background: 0;
+    background-color: var(--color-khaki);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+.sign-up:hover{
+    transform: scale(1);
+    background-color: var(--color-khaki-100);
+}

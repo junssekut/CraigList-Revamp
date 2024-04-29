@@ -1,10 +1,3 @@
-var rectangle = document.getElementById("rectangle");
-if (rectangle) {
-  rectangle.addEventListener("click", function (e) {
-    window.location.href = "./desktop-2.html";
-  });
-}
-
 let previousColorFrame34 = null;
 
 function toggleColor(element) {

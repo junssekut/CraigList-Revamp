@@ -112,12 +112,17 @@ function parseBooleanQueryParam(value) {
 function authentication_handler(authenticated = false) {
     const element_button = document.getElementById('button');
 
+    if (!element_button) return;
+
     if (authenticated) {
         element_button.textContent = 'Create Posting';
         element_button.addEventListener('click', create_posting_handler);
 
         const account = getAccount();
         const element_profile = document.getElementById('button-profile');
+
+        if (!element_profile) return;
+
         element_profile.style.display = 'block';
         element_profile.addEventListener('click', () => swal({
             title: 'Profile Detail',
@@ -149,9 +154,6 @@ function authentication_handler(authenticated = false) {
         const element_profile = document.getElementById('button-profile');
         element_profile.style.display = 'none';
     }
-
-
-    
 }
 
 function init() {
@@ -206,12 +208,10 @@ function init() {
     ])
     .then(() => {
         authentication_handler(isAuthenticated());
-        document.getElementById('navbar-map').addEventListener('click', () => swal("Error", "The service search by location is currently not available!", "error"));
+
+        if (document.getElementById('navbar-map')) document.getElementById('navbar-map').addEventListener('click', () => swal("Error", "The service search by location is currently not available!", "error"));
     })
     .catch((error) => console.error(`Failed to load resources: ${error}`));
-
-    $(document).ready(() => {
-    });
 }
 
 init();
