@@ -1,6 +1,20 @@
-function create_posting_handler() {
-    console.log('test');
+function getProducts() {
+    return new Promise((resolve, reject) => {
+        const ajax = new XMLHttpRequest();
 
+        ajax.open('GET', '../../public/data.json', true);
+        ajax.onreadystatechange = function () {
+            if (this.readyState !== 4) return;
+            if (this.status !== 200) reject(new Error('Failed to load data'));
+
+            resolve(JSON.parse(this.responseText).products);
+        };
+
+        ajax.send();
+    });
+}
+
+function create_posting_handler() {
     if (!isAuthenticated()) {
         swal({
             text: 'You need to Login first before you can create a post!',
@@ -124,7 +138,6 @@ function shuffleArray(array) {
 
 
 function init() {
-    console.log('test');
     document.getElementById('create-posting').addEventListener('click', create_posting_handler);
 
     populate_category();

@@ -1,3 +1,7 @@
+function isAuthenticated() {
+    return localStorage.getItem('authenticated') === 'true';
+}
+
 function load_ajax() {
     return new Promise((resolve, reject) => {
         const ajax = new XMLHttpRequest();
@@ -35,22 +39,6 @@ function getProductFromID(id = null) {
             }
 
             resolve(products[0]);
-        };
-
-        ajax.send();
-    });
-}
-
-function getProducts() {
-    return new Promise((resolve, reject) => {
-        const ajax = new XMLHttpRequest();
-
-        ajax.open('GET', '../../public/data.json', true);
-        ajax.onreadystatechange = function () {
-            if (this.readyState !== 4) return;
-            if (this.status !== 200) reject(new Error('Failed to load data'));
-
-            resolve(JSON.parse(this.responseText).products);
         };
 
         ajax.send();
