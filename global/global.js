@@ -128,7 +128,7 @@ function authentication_handler(authenticated = false) {
         }));
     } else {
         element_button.textContent = 'Login';
-        element_button.addEventListener('click', () => window.open('/login/login.html', '_self'));
+        element_button.addEventListener('click', () => window.open('../login/login.html', '_self'));
 
         const element_profile = document.getElementById('button-profile');
         element_profile.style.display = 'none';
