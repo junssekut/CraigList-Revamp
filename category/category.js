@@ -4,7 +4,7 @@ let data, data_display;
 function onProductClick(event) {
     const product = event.currentTarget;
     
-    window.open(`/product/product.html?id=${product.getAttribute('product-id')}`, '_self');
+    window.open(`../product/product.html?id=${product.getAttribute('product-id')}`, '_self');
 }
 
 function load_location_filter() {
@@ -158,7 +158,7 @@ function load_data() {
     return new Promise((resolve, reject) => {
         const ajax = new XMLHttpRequest();
 
-        ajax.open('GET', '/public/data.json', true);
+        ajax.open('GET', '../public/data.json', true);
         ajax.onreadystatechange = function () {
             if (this.readyState !== 4) return;
             if (this.status !== 200) reject(new Error('Failed to load data'));
@@ -195,7 +195,7 @@ function render() {
         // data-tilt data-tilt-maxTilt="15" data-tilt-speed="5000" data-tilt-perspective="1000"
         element.innerHTML = `
             <div class="product" data-aos="flip-down">
-                <img class="product-image" src="${product.thumbnail}" alt="${product.image}" >
+                <img class="product-image" src="../${product.thumbnail}" alt="${product.image}" >
                 <div class="product-detail">
                     <h1 class="product-name">${product.name}</h1>
                     <p class="product-price">$${product.price}</p>
@@ -225,14 +225,14 @@ function init() {
         if (!query_category)
             swal("Error", "You must select a category to enter this page.", "error")
                 .then(() => {
-                    window.open('/home/home.html', '_self');   
+                    window.open('../home/home.html', '_self');   
                 });
 
         category = query_category;
 
         const element_category_href = document.getElementById('category-href');
         element_category_href.textContent = category;
-        element_category_href.addEventListener('click', () => window.open(`/category/category.html?category=${category}`, '_self'));
+        element_category_href.addEventListener('click', () => window.open(`./category.html?category=${category}`, '_self'));
     });
 
     load_data().then(() => render()).catch(err => console.error(err));
