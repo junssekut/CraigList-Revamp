@@ -1,8 +1,12 @@
+function isAuthenticated() {
+    return localStorage.getItem('authenticated') === 'true';
+}
+
 function getProducts() {
     return new Promise((resolve, reject) => {
         const ajax = new XMLHttpRequest();
 
-        ajax.open('GET', '../../public/data.json', true);
+        ajax.open('GET', '../public/data.json', true);
         ajax.onreadystatechange = function () {
             if (this.readyState !== 4) return;
             if (this.status !== 200) reject(new Error('Failed to load data'));

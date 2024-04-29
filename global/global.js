@@ -183,7 +183,6 @@ function init() {
         loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'),
         loadScript('https://unpkg.com/sweetalert/dist/sweetalert.min.js', load_sweet_alert),
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.7.3/browser/overlayscrollbars.browser.es6.min.js', load_overlay_scrollbars).then(() => loadScript('/global/js/overlay-scrollbars.js', true)),
-        loadScript('../global/authentication.js')
     ])
     .then(() => {
         authentication_handler(isAuthenticated());
