@@ -1,9 +1,4 @@
-var { 
-    OverlayScrollbars, 
-    // ScrollbarsHidingPlugin, 
-    // SizeObserverPlugin, 
-    // ClickScrollPlugin  
-} = OverlayScrollbarsGlobal;
+var { OverlayScrollbars } = OverlayScrollbarsGlobal;
 
 const scrollbar = OverlayScrollbars(document.body, {
     scrollbars: {
