@@ -15,6 +15,10 @@ function create_posting_handler() {
     swal("Maintenance", "This button is currently on maintenance!", "warning");
 }
 
+function isAuthenticated() {
+    return localStorage.getItem('authenticated') === 'true';
+}
+
 // Function to load HTML content
 function loadHTML(url, targetId, load = true) {
     if (!load) return Promise.resolve();
