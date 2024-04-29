@@ -194,7 +194,7 @@ function render() {
         element.addEventListener('click', onProductClick);
         // data-tilt data-tilt-maxTilt="15" data-tilt-speed="5000" data-tilt-perspective="1000"
         element.innerHTML = `
-            <div class="product" data-aos="flip-down">
+            <div class="product" data-aos="flip-down" data-tilt data-tilt-disable-axis="x" data-tilt-glare="true" data-tilt-maxTilt="0" data-tilt-perspective="10000" data-tilt-maxGlare="0.7">
                 <img class="product-image" src="../${product.thumbnail}" alt="${product.image}" >
                 <div class="product-detail">
                     <h1 class="product-name">${product.name}</h1>
@@ -204,6 +204,7 @@ function render() {
             </div>
         `;
 
+        // $(element).tilt();
         list.appendChild(element);
     });
 

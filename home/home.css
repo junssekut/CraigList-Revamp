@@ -97,14 +97,14 @@ body {
     margin: 5px;
     align-self: center;
     font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
 }
 
 .container-button {
     align-self: center;
 
     padding: 10px 20px 10px 20px;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-mini);
     font-weight: 700;
     border: none;
     outline: none;
