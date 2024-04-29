@@ -28,6 +28,13 @@ function getAccount() {
     }
 }
 
+function logout() {
+    if (!isAuthenticated()) return new Error('Failed to logout, no logged in account');
+
+    localStorage.setItem('authenticated', 'false');
+    localStorage.removeItem('email');
+}
+
 // Function to load HTML content
 function loadHTML(url, targetId, load = true) {
     if (!load) return Promise.resolve();
