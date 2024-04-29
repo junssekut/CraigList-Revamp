@@ -66,7 +66,7 @@ async function populate_category() {
             const image = document.createElement('img');
             image.classList.add('item-image');
             // Replace src attribute with the first image from the product's images array
-            image.src = product.thumbnail;
+            image.src = `../${product.thumbnail}`;
             image.alt = product.name;
 
             // Create a paragraph element for the category name
