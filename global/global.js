@@ -19,6 +19,15 @@ function isAuthenticated() {
     return localStorage.getItem('authenticated') === 'true';
 }
 
+function getAccount() {
+    if (!isAuthenticated()) return new Error('Not authenticated');
+
+    return {
+        authenticated: localStorage.getItem('authenticated'),
+        email: localStorage.getItem('email')
+    }
+}
+
 // Function to load HTML content
 function loadHTML(url, targetId, load = true) {
     if (!load) return Promise.resolve();
