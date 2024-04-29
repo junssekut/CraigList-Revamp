@@ -148,7 +148,7 @@ function authentication_handler(authenticated = false) {
             }
         }));
     } else {
-        element_button.textContent = 'Login';
+        element_button.textContent = 'Login or Sign Up';
         element_button.addEventListener('click', () => window.open('../login/login.html', '_self'));
 
         const element_profile = document.getElementById('button-profile');

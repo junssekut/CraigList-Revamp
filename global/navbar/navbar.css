@@ -84,7 +84,7 @@
     background-color: var(--color-khaki);
     border-radius: var(--br-xl);
 
-    font-size: var(--font-size-mini);
+    font-size: var(--font-size-xs);
     font-weight: 600;
     color: var(--color-black);
     font-family: var(--font-plus-jakarta-sans);
