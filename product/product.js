@@ -139,7 +139,7 @@ async function load_product() {
             const imageURL = product.images[i];
             const imageElement = previewImages[i];
             
-            imageElement.src = imageURL;
+            imageElement.src = `../${imageURL}`;
         }
     }
 
