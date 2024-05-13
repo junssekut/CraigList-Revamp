@@ -123,7 +123,7 @@ async function populate_picks() {
         itemModal.appendChild(image);
         itemModal.appendChild(productName);
 
-        itemModal.addEventListener('click', () => window.open(`../product/product.html?id=${product.id}`));
+        itemModal.addEventListener('click', () => window.open(`../product/product.html?id=${product.id}`, '_self'));
 
         // Append item-modal div to the picks list
         picksList.appendChild(itemModal);
@@ -139,7 +139,6 @@ function shuffleArray(array) {
     }
     return array;
 }
-
 
 function init() {
     // document.getElementById('create-posting').addEventListener('click', create_posting_handler);
