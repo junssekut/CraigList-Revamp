@@ -8,7 +8,7 @@ body {
 .searchbar {
     position: relative;
     width: 100%;
-    height: 65vh; /* Menyesuaikan tinggi dengan tinggi viewport */
+    height: 60vh; /* Menyesuaikan tinggi dengan tinggi viewport */
     background-image: url('./assets/banner.jpg');
     background-size: cover; /* Untuk menutupi seluruh area dengan gambar */
     background-position: center; /* Posisi gambar di tengah-tengah */
