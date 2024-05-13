@@ -79,13 +79,13 @@
 }
 
 .navbar-button#button {
-    padding: 10px 25px 10px 25px;
+    padding: 5px 25px 5px 25px;
 
     background-color: var(--color-khaki);
     border-radius: var(--br-xl);
 
     font-size: var(--font-size-xs);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-black);
     font-family: var(--font-plus-jakarta-sans);
 
@@ -121,6 +121,14 @@
     background-color: var(--color-khaki2);
     color: var(--color-black);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button-icon {
+    padding: 7px 5px 5px 0px;
+}
+
+.container-button-icon {
+    padding: 7px 5px 5px 0px;
 }
 
 .navbar-quick-links {

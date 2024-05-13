@@ -142,7 +142,7 @@ function shuffleArray(array) {
 
 
 function init() {
-    document.getElementById('create-posting').addEventListener('click', create_posting_handler);
+    // document.getElementById('create-posting').addEventListener('click', create_posting_handler);
 
     populate_category();
     populate_picks();

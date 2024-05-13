@@ -115,7 +115,8 @@ function authentication_handler(authenticated = false) {
     if (!element_button) return;
 
     if (authenticated) {
-        element_button.textContent = 'Create Posting';
+        // element_button.textContent = 'Create Posting';
+        element_button.innerHTML = '<i class="container-button-icon fa-solid fa-circle-plus"></i> Create Post';
         element_button.addEventListener('click', create_posting_handler);
 
         const account = getAccount();
@@ -148,7 +149,7 @@ function authentication_handler(authenticated = false) {
             }
         }));
     } else {
-        element_button.textContent = 'Login or Sign Up';
+        element_button.innerHTML = '<i class="navbar-button-icon fa-solid fa-right-to-bracket"></i> Login or Sign up';
         element_button.addEventListener('click', () => window.open('../login/login.html', '_self'));
 
         const element_profile = document.getElementById('button-profile');

@@ -73,10 +73,10 @@
             "description": "The Alchemist: Bestselling Novel. The Alchemist follows the journey of an Andalusian shepherd boy named Santiago. Believing a recurring dream to be prophetic, Santiago decides to travel to a Romani fortune-teller in a nearby town to discover its meaning. The old woman interprets the dream as a prophecy telling Santiago that he will find a hidden treasure at the Egyptian pyramids. Motivated by his dream, Santiago sells his flock and embarks on a journey to fulfill his destiny. Along the way, he encounters a variety of characters who teach him valuable lessons about life, love, and the pursuit of one's dreams.",
             "thumbnail": "/public/books/the-alchemist.jpeg",
             "images": [
-                "/public/clothing/blue-jeans.jpeg",
-                "/public/books/the-alchemist.jpeg",
-                "/public/clothing/blue-jeans.jpeg",
-                "/public/clothing/blue-jeans.jpeg"
+                "/public/books/the-alchemist-preview-1.jpeg",
+                "/public/books/the-alchemist-preview-2.jpeg",
+                "/public/books/the-alchemist-preview-3.jpeg",
+                "/public/books/the-alchemist-preview-4.jpeg"
             ],
             "location": "Balikpapan"
         },

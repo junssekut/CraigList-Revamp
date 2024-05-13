@@ -188,6 +188,10 @@
     background-color: var(--color-khaki2);
 }
 
+.make-offer-icon {
+    padding: 5px;
+}
+
 .modal-title {
     align-self: center;
 
