@@ -39,11 +39,11 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
 
-    min-height: 900px;
+    min-height: 750px;
 
-    padding: 70px 130px 0px 130px;
+    padding: 10px 130px 0px 130px;
 
-    gap: 100px;
+    gap: 70px;
 }
 
 .container-wrapper {
