@@ -78,7 +78,7 @@ async function populate_category() {
             itemModal.appendChild(image);
             itemModal.appendChild(categoryName);
 
-            itemModal.addEventListener('click', () => window.open(`../category/category.html?category=${product.category}`));
+            itemModal.addEventListener('click', () => window.open(`../category/category.html?category=${product.category}`, '_self'));
 
             // Append item-modal div to the container list
             containerList.appendChild(itemModal);
